@@ -37,7 +37,7 @@
 
 .about-me h2 {
     font-family: 'Lexend', sans-serif;
-    text-align: center;
+    text-align: left;
     margin-bottom: 15px;
     font-size: 28px;
     font-weight: bold;
@@ -46,10 +46,10 @@
 
 .about-me p {
     font-family: 'Lexend', sans-serif;
-    margin: 5px auto;
+    margin: 0;
     max-width: 400px; /* batas lebar paragraf */
-    margin: 0 auto;   /* biar paragraf di tengah */
-    text-align: justify; /* teks rata kanan-kiri */
+    margin: 0;   /* biar paragraf di tengah */
+    text-align: left; /* teks rata kanan-kiri */
     word-wrap: break-word; /* kalau ada kata panjang biar pindah baris */
     line-height: 1.6;
 }
@@ -63,4 +63,23 @@ html {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+.photo img {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.text {
+ flex: 1;
 }
