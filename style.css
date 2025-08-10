@@ -4,11 +4,23 @@
   border-radius: 10px;
   width: fit-content; /* biar menyesuaikan isi */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* efek bayangan */
+  background-color: rgba(255, 255, 255, 0.8); /* putih transparan */
+  padding: 15px;
+  border-radius: 10px;
+  width: fit-content;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+  /* Animasi awal */
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: fadeSlideIn 1s ease-out forwards;
 }
 .info-box p {
   margin: 5px 0; /* jarak antar baris */
+
 }
 .about-me {
+    font-family: 'Lexend', sans-serif;
     max-width: 800px;
     margin: 50px auto;
     padding: 20px 30px;
@@ -18,9 +30,13 @@
     font-family: Arial, sans-serif;
     color: #333;
     line-height: 1.6;
+     opacity: 0;
+  transform: translateX(-30px);
+  animation: fadeSlideIn 1s ease-out forwards;
 }
 
 .about-me h2 {
+    font-family: 'Lexend', sans-serif;
     text-align: center;
     margin-bottom: 15px;
     font-size: 28px;
@@ -29,10 +45,22 @@
 }
 
 .about-me p {
+    font-family: 'Lexend', sans-serif;
     margin: 5px auto;
     max-width: 400px; /* batas lebar paragraf */
     margin: 0 auto;   /* biar paragraf di tengah */
     text-align: justify; /* teks rata kanan-kiri */
     word-wrap: break-word; /* kalau ada kata panjang biar pindah baris */
     line-height: 1.6;
+}
+html {
+    scroll-behavior: smooth;
+    font-family: 'Lexend', sans-serif;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
