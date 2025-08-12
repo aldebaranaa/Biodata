@@ -260,11 +260,32 @@ html {
   animation: fadeSlideIn 1s ease-out forwards;
 }
 
-.ad-model {
-  width: 100%;
-  height: 700px;
-  margin: 20px 0;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+.scratch {
+ background: rgba(255,255,255,0.8);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* efek bayangan */
+  background-color: rgba(255, 255, 255, 0.8); /* putih transparan */
+  padding: 15px;
+  border-radius: 10px;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+  color: #333;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: fadeSlideIn 1s ease-out forwards;
+}
+
+.animate-down {
+  transform: translateY(-30px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+.animate-down.show {
+  transform: translateY(0);
+  opacity: 1;
 }
