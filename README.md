@@ -32,7 +32,6 @@ This website serves as a personal biodata, created for my first informatics assi
 |-----------|---------------|
 | HTML      | Structure     |
 | CSS       | Styling       |
-| (Optional) | e.g., JavaScript for interactions |
 
 ---
 
