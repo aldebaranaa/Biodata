@@ -22,8 +22,6 @@ This website serves as a personal biodata, created for my first informatics assi
 - Easy-to-customize structure and styles  
 - Lightweight and accessible
 
-*(Feel free to list any additional elements like animations, color scheme, fonts, etc.)*
-
 ---
 
 ## Built With
