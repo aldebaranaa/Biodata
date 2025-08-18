@@ -7,30 +7,59 @@
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="asset/coin.png" type="image/x-icon">
-<!-- CSS AOS -->
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-
-<!-- JS AOS -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-<style>
-    body {
-        font-family: 'Lexend', sans-serif;
-        background-image: url('asset/origbig.png');
-
-        background-size: cover; /* supaya menutupi seluruh layar */
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed; /* ini yang bikin background diam */
-    }
-    footer {
-        opacity: 0.8;
-    }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- MEMBUAT JUDUL HALAMAN WEBSITE -->
 <title>My Biodata</title>
 </head>
 <body>
+<canvas id="trail"></canvas>
+
+<script>
+const canvas = document.getElementById('trail');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let pixels = [];
+
+document.addEventListener('mousemove', (e) => {
+    pixels.push({
+        x: e.clientX,
+        y: e.clientY,
+        size: Math.random() * 4 + 2,
+        opacity: 1
+    });
+});
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (let i = 0; i < pixels.length; i++) {
+        let p = pixels[i];
+        ctx.fillStyle = `rgba(255, 255, 255, ${p.opacity})`;
+        ctx.fillRect(p.x, p.y, p.size, p.size);
+        p.opacity -= 0.02;
+        p.y -= 0.5; // efek naik sedikit
+
+        if (p.opacity <= 0) {
+            pixels.splice(i, 1);
+            i--;
+        }
+    }
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+</script>
 <center>
 <table border="0" width="100%" cellspacing="28">
 <tbody>
@@ -78,7 +107,7 @@ alt="SMPIT Al Haraki Logo" width="115" height="200"></a>
 
       <div class="timeline">
         <div class="timeline-item">
-          <div class="timeline-point">TK</div>
+          <div class="timeline-point"><img src="asset/tk.png" alt="" width="50px"></div>
           <div class="timeline-content">
             <span class="timeline-period">2015 — 2017</span>
             <strong class="timeline-school">TK Aisyiyah Bustanul Athfal 9</strong>
@@ -161,13 +190,12 @@ yang diberikan sebelumnya, video tersebut harus ada perkenalan diri -->
 <tr height="300px">
 <td colspan="2">
 <center>
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/BR0VQ_AITsI?si=x_kMOxBkvo0Fqecj"
-title="YouTube video player" frameborder="0" allow="accelerometer;
-autoplay; clipboard-write; encrypted-media; gyroscope;
-picture-in-picture; web-share"
-referrerpolicy="strict-origin-when-cross-origin"
-allowfullscreen></iframe>
+<div class="animate-down">
+  <div class="scratch">
+    <h2>Media</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UhWM02o3GIg?si=uUZQ9dO3EQCCFxzE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div> 
 </center>
 </td>
 </tr>

@@ -1,22 +1,22 @@
 .info-box {
-  background-color: rgba(255, 255, 255, 0.8); /* putih transparan */
+  background-color: rgba(255, 255, 255, 0.8); 
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* efek bayangan */
-  background-color: rgba(255, 255, 255, 0.8); /* putih transparan */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  background-color: rgba(255, 255, 255, 0.8); 
   padding: 15px;  
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: #333;
   height: 190px;
   
-  /* Animasi awal */
+ 
   opacity: 0;
   transform: translateX(-30px);
   animation: fadeSlideIn 1s ease-out forwards;
 }
 .info-box p {
-  margin: 5px 0; /* jarak antar baris */
+  margin: 5px 0; 
 
 
 }
@@ -48,10 +48,10 @@
 .about-me p {
     font-family: 'Lexend', sans-serif;
     margin: 0;
-    max-width: 400px; /* batas lebar paragraf */
-    margin: 0;   /* biar paragraf di tengah */
-    text-align: left; /* teks rata kanan-kiri */
-    word-wrap: break-word; /* kalau ada kata panjang biar pindah baris */
+    max-width: 400px; 
+    margin: 0;   
+    text-align: left; 
+    word-wrap: break-word; 
     line-height: 1.6;
 }
 html {
@@ -85,7 +85,7 @@ html {
  flex: 1;
 }
 
-/* CSS: taruh di head atau file .css */
+
 :root{
   --glass-bg: rgba(255,255,255,0.85);
   --glass-bg-2: rgba(255,255,255,0.65);
@@ -94,19 +94,19 @@ html {
   --shadow: 0 8px 20px rgba(10,20,30,0.25);
 }
 
-/* wrapper untuk mengatur posisi -- sesuaikan margin-top agar pas di tengah */
+
 .timeline-wrapper {
   background: rgba(255,255,255,0.8);
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* efek bayangan */
-  background-color: rgba(255, 255, 255, 0.8); /* putih transparan */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  background-color: rgba(255, 255, 255, 0.8); 
   padding: 15px;
   border-radius: 10px;
 }
 
-/* judul */
+
 .timeline-title {
   font-size: 20px;
   margin-bottom: 15px;
@@ -115,7 +115,7 @@ html {
 
 
 
-/* garis timeline */
+
 .timeline{
   display: flex;
   gap: 22px;
@@ -125,7 +125,7 @@ html {
   padding: 18px;
 }
 
-/* horizontal connector line (di belakang) */
+
 .timeline::before{
   content: "";
   position: absolute;
@@ -140,7 +140,7 @@ html {
   filter: blur(0.3px);
 }
 
-/* tiap item */
+
 .timeline-item{
   z-index: 2;
   width: 30%;
@@ -158,13 +158,30 @@ html {
   animation: fadeUp .6s ease both;
 }
 
-/* penekanan hover */
+.timeline-item1{
+  z-index: 2;
+  width: 30%;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 10px;
+  transition: transform .36s cubic-bezier(.2,.9,.2,1), box-shadow .36s;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 6px 18px rgba(8,12,18,0.12);
+  backdrop-filter: blur(4px);
+  transform-origin: center;
+  animation: fadeUp .6s ease both;
+}
+
+
 .timeline-item:hover{
   transform: translateY(-6px) scale(1.01);
   box-shadow: 0 18px 36px rgba(8,12,18,0.18);
 }
 
-/* titik + ikon */
+
 .timeline-point{
   width: 68px;
   height: 68px;
@@ -179,7 +196,7 @@ html {
   box-shadow: 0 6px 18px rgba(10,20,30,0.06);
 }
 
-/* ikon svg */
+
 .icon{
   width: 34px;
   height: 34px;
@@ -187,7 +204,7 @@ html {
   opacity: 0.95;
 }
 
-/* konten teks */
+
 .timeline-content{
   color: var(--muted);
   font-family: "Inter", "Segoe UI", system-ui, sans-serif;
@@ -213,7 +230,7 @@ html {
   color: rgba(0,0,0,0.55);
 }
 
-/* responsif: layar sempit -> ubah jadi vertikal */
+
 @media (max-width: 780px){
   .timeline{
     flex-direction: column;
@@ -225,7 +242,7 @@ html {
   .timeline-point{ width:56px; height:56px; min-width:56px; min-height:56px; border-radius:10px; }
 }
 
-/* animasi masuk */
+
 @keyframes fadeUp{
   from{ transform: translateY(12px); opacity: 0; }
   to{ transform: translateY(0); opacity: 1; }
@@ -244,8 +261,8 @@ html {
   background: rgba(255,255,255,0.8);
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* efek bayangan */
-  background-color: rgba(255, 255, 255, 0.8); /* putih transparan */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  background-color: rgba(255, 255, 255, 0.8); 
   padding: 15px;
   border-radius: 10px;
   align-items: center;
@@ -264,8 +281,8 @@ html {
  background: rgba(255,255,255,0.8);
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* efek bayangan */
-  background-color: rgba(255, 255, 255, 0.8); /* putih transparan */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  background-color: rgba(255, 255, 255, 0.8); 
   padding: 15px;
   border-radius: 10px;
   align-items: center;
@@ -289,3 +306,29 @@ html {
   transform: translateY(0);
   opacity: 1;
 }
+
+    body {
+        font-family: 'Lexend', sans-serif;
+        background-image: url('asset/origbig.png');
+        overflow: auto;
+        margin: 0;
+        background-size: cover; 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; 
+        overflow-x: hidden;
+    }
+    footer {
+        opacity: 0.8;
+    }
+    canvas {
+        display: block;
+    }
+
+      #trail {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1; 
+        pointer-events: none; 
+    }
