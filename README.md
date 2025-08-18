@@ -9,21 +9,6 @@ Welcome to **Biodata**—a personal biodata website crafted as my very first inf
 Explore the live version here:  
 https://aldebaranaa.github.io/Biodata/
 
----
-
-##  Table of Contents
-
-- [About](#about)  
-- [Features](#features)  
-- [Built With](#built-with)  
-- [Usage](#usage)  
-- [Customization](#customization)  
-- [Screenshots](#screenshots) *(optional)*  
-- [Author](#author)  
-- [License](#license)
-
----
-
 ## About
 
 This website serves as a personal biodata, created for my first informatics assignment at school. It highlights my profile, interests, and background through an interactive web interface designed with HTML and CSS.
